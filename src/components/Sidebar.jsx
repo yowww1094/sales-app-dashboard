@@ -11,7 +11,7 @@ const Sidebar = () => {
         <div className="sidebar">
           <div className="title">
             <img src="" alt="logo" />
-            <span>Dashboard</span>
+            <span>You Own ERP</span>
           </div>
 
           <div className="menu">
@@ -44,6 +44,8 @@ const Sidebar = () => {
 const Container = styled.div`
   width: 300px;
   background-color: #1c2434;
+  border-right: solid 0.5px #00000010;
+  box-shadow: 0.5px 0 8px 1px #00000025;
   color: white;
   .sidebar{
     height: 100%;
@@ -54,7 +56,9 @@ const Container = styled.div`
     gap: 15px;
     padding: 15px 20px;
     .title {
+      width: 100%;
       display: flex;
+      flex-direction: column;
       gap: 5px;
       justify-content: center;
       align-items: center;
@@ -73,12 +77,11 @@ const Container = styled.div`
       flex-direction: column;
       justify-content: start;
       align-items: start;
-      gap: 10px;
-      padding: 35px 0 0 25px;
+      gap: 5px;
+      padding: 35px 0 0 10px;
       .menu-title {
-        margin: 0 0 0 10px;
-        font-size: 15px;
-        font-weight: 400;
+        font-size: 14px;
+        font-weight: 500;
         color: #a0adb6;
       }
       .menu-items {
@@ -88,7 +91,7 @@ const Container = styled.div`
         flex-direction: column;
         gap: 8px;
         .menu-item {
-          padding: 10px 18px;
+          padding: 8px 18px;
           width: auto;
           display: flex;
           flex-direction: row;
@@ -97,6 +100,7 @@ const Container = styled.div`
           gap: 10px;
           &:hover, &:active {
             background-color: #333a48;
+            border-radius: 10px;
           }
           span {
             font-size: 20px;
@@ -108,6 +112,7 @@ const Container = styled.div`
           .link {
             padding: 5px;
             width: 100%;
+            font-size: 14px;
             font-weight: 400;
             color: white;
             text-decoration: none;
@@ -117,8 +122,8 @@ const Container = styled.div`
     }
     .copyright {
       span {
-        font-size: 10px;
-        font-weight: 200;
+        font-size: 11px;
+        font-weight: 300;
         color: white;
         .link {
           color: white;

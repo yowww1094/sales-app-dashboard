@@ -5,7 +5,7 @@ import '../index.css'
 
 import Navbar from "../components/Navbar"
 import Sidebar from "../components/Sidebar"
-import Footer from "../components/Footer"
+//import Footer from "../components/Footer"
 
 const Layout = () => {
   return (
@@ -15,11 +15,9 @@ const Layout = () => {
       <div className='Main'>
         <Navbar/>
 
-        <main>
+        <main className='content'>
           <Outlet/>
         </main>
-
-        <Footer/>
       </div>
     </div>
     </>

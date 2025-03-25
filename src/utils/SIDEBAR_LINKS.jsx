@@ -1,7 +1,8 @@
 import { MdOutlineSpaceDashboard } from "react-icons/md";
 import { LiaBoxesSolid } from "react-icons/lia";
 import { GrCart } from "react-icons/gr";
-import { BsBasket3 } from "react-icons/bs";
+import { BsBasket3, BsTools  } from "react-icons/bs";
+
 
 
 export const SIDEBAR_LINKS = [
@@ -11,18 +12,23 @@ export const SIDEBAR_LINKS = [
         link: '/',
     },
     {
+        title: "Administration",
+        icon: <BsTools />,
+        link: '/administration',
+    },
+    {
         title: 'Stock',
         icon: <LiaBoxesSolid />,
-        link: '/',
+        link: '/stock',
     },
     {
-        title: 'Achat',
+        title: 'Purchases',
         icon: <GrCart />,
-        link: '/',
+        link: '/purchases',
     },
     {
-        title: 'Ventes',
+        title: 'Sales',
         icon: <BsBasket3 />,
-        link: '/',
+        link: '/sales',
     },
 ];
