@@ -42,6 +42,7 @@ const Sidebar = () => {
 }
 
 const Container = styled.div`
+  position: sticky;
   width: 300px;
   background-color: #1c2434;
   border-right: solid 0.5px #00000010;

@@ -1,34 +1,30 @@
-import React from 'react'
-import { useLocation } from 'react-router-dom';
-import styled from 'styled-components'
+import React from "react";
+import { useLocation } from "react-router-dom";
+import styled from "styled-components";
 
-import { IoMdNotificationsOutline  } from "react-icons/io";
+import { IoMdNotificationsOutline } from "react-icons/io";
 import { MdPersonOutline } from "react-icons/md";
 import { VscGear } from "react-icons/vsc";
 
-
 const Navbar = () => {
-
   const handleSubmit = (e) => {
-    e.preventDefault()
-  }
+    e.preventDefault();
+  };
 
   return (
     <>
       <Container>
         <div className="navbar">
-          <div className="page-title">
-            Dashboard
-          </div>
+          <div className="page-title">Dashboard</div>
           <div className="utils">
             <div className="icon-container">
               <div className="icons">
                 <IoMdNotificationsOutline />
-                <span className='icon-badge'>2</span>
+                <span className="icon-badge">2</span>
               </div>
               <div className="icons">
                 <VscGear />
-                <span className='icon-badge'>5</span>
+                <span className="icon-badge">5</span>
               </div>
             </div>
             <div className="profile-container">
@@ -38,10 +34,11 @@ const Navbar = () => {
         </div>
       </Container>
     </>
-  )
-}
+  );
+};
 
 const Container = styled.div`
+  position: sticky;
   width: 100%;
   height: 60px;
   border-bottom: solid 0.5px #00000010;
@@ -95,9 +92,9 @@ const Container = styled.div`
       .profile-container {
         font-size: 28px;
         cursor: pointer;
-      } 
+      }
     }
   }
 `;
 
-export default Navbar
+export default Navbar;
