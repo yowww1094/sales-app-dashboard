@@ -43,6 +43,8 @@ const Sidebar = () => {
 
 const Container = styled.div`
   position: sticky;
+  top: 0;
+  overflow: hidden;
   width: 300px;
   background-color: #1c2434;
   border-right: solid 0.5px #00000010;
@@ -79,8 +81,9 @@ const Container = styled.div`
       justify-content: start;
       align-items: start;
       gap: 5px;
-      padding: 35px 0 0 10px;
+      padding: 35px 0 0 0;
       .menu-title {
+        margin-left: 15px;
         font-size: 14px;
         font-weight: 500;
         color: #a0adb6;

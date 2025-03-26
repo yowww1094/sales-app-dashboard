@@ -14,47 +14,58 @@ import {
 const data = [
   {
     month: "January",
-    amt: 2400,
+    cashAmt: 2400,
+    bankAmt: 5000,
   },
   {
     month: "Febuary",
-    amt: 2210,
+    cashAmt: 2210,
+    bankAmt: 5000,
   },
   {
     month: "March",
-    amt: 2290,
+    cashAmt: 2290,
+    bankAmt: 5000,
   },
   {
     month: "April",
-    amt: 2000,
+    cashAmt: 2000,
+    bankAmt: 5000,
   },
   {
     month: "May",
-    amt: 2181,
+    cashAmt: 2181,
+    bankAmt: 5000,
   },
   {
     month: "June",
-    amt: 2500,
+    cashAmt: 2500,
+    bankAmt: 5000,
   },
   {
     month: "July",
-    amt: 2100,
+    cashAmt: 2100,
+    bankAmt: 5000,
   },
   {
     month: "September",
-    amt: 2100,
+    cashAmt: 2100,
+    bankAmt: 5000,
   },
   {
     month: "October",
-    amt: 2100,
+    cashAmt: 2100,
+    bankAmt: 5000,
   },
   {
     month: "November",
-    amt: 2100,
+    cashAmt: 2100,
+    bankAmt: 5000,
   },
   {
     month: "December",
-    amt: 2100,
+    cashAmt: 2100,
+    bankAmt: 5000,
   },
 ];
 
@@ -63,17 +74,18 @@ const Chart = () => {
     <>
       <Container>
         <div className="title">
-          <h3>Cash Desk Analytics</h3>
+          <h3>Cash/Bank Balance Analytics</h3>
         </div>
         <div className="chart">
-          <ResponsiveContainer width="100%"  aspect={2/1}>
+          <ResponsiveContainer width="100%" aspect={4/1}>
             <BarChart data={data}>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="month" className="axis-title" />
-              {/* <YAxis /> */}
+              <YAxis />
               <ReferenceLine y={0} stroke="#000" />
-              <Bar dataKey="amt" fill="#4352c0" label={{ position: "top" }} padding={{ left: 20, right: 20 }}/>
               <Tooltip />
+              <Bar dataKey="cashAmt" fill="#4352c0" label={{ position: "top" }} padding={{ left: 20, right: 20 }}/>
+              <Bar dataKey="bankAmt" fill="#50a82d" label={{ position: "top" }} padding={{ left: 20, right: 20 }}/>
             </BarChart>
           </ResponsiveContainer>
         </div>
@@ -92,7 +104,7 @@ const Container = styled.div`
     margin-bottom: 15px;
   }
   .axis-title {
-    font-size: 12px;
+    font-size: 14px;
   }
 `;
 

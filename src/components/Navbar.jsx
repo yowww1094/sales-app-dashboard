@@ -39,11 +39,13 @@ const Navbar = () => {
 
 const Container = styled.div`
   position: sticky;
+  top: 0;
   width: 100%;
   height: 60px;
   border-bottom: solid 0.5px #00000010;
   box-shadow: 0 0.5px 8px 1px #00000025;
   padding: 5px 18px;
+  background-color: white;
   .navbar {
     height: 100%;
     width: 100%;

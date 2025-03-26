@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import InsightsCard from '../components/InsightsCard';
 import SimpleBarChart from '../components/charts/SimpleBarChart';
 import ComposedBarChart from '../components/charts/ComposedBarChart';
-
+import PieReChart from '../components/charts/PieReChart'
 const Dashboard = () => {
   return (
     <>
@@ -14,12 +14,12 @@ const Dashboard = () => {
           <InsightsCard />
           <InsightsCard />
         </div>
-        <div className="charts">
-          <SimpleBarChart />
+        <div className="single-chart">
           <SimpleBarChart />
         </div>
-        <div className="charts">
+        <div className="double-charts">
           <ComposedBarChart />
+          <PieReChart/>
         </div>
       </Container>
     </>
@@ -39,11 +39,11 @@ const Container = styled.div`
     align-items: center;
     justify-content: space-between;
   }
-  .charts{
-    display: flex;
+  .double-charts{
+    display: grid;
     align-items: center;
     justify-content: space-between;
-    flex-direction: row;
+    grid-template-columns: 70% calc(30% - 30px);
     gap: 30px;
   }
 `;

@@ -84,7 +84,7 @@ const ComposedBarChart = () => {
           <h3>Cash Desk Analytics</h3>
         </div>
         <div className="chart">
-          <ResponsiveContainer width="100%">
+          <ResponsiveContainer width="100%" aspect={4/1}>
             <BarChart data={data} >
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="month" />
@@ -110,9 +110,6 @@ const Container = styled.div`
   border-radius: 5px;
   .title {
     margin-bottom: 15px;
-  }
-  .axis-title {
-    font-size: 12px;
   }
 `;
 
