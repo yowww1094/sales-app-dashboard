@@ -2,19 +2,20 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { FaArrowUp } from "react-icons/fa";
+import { FaArrowDown } from "react-icons/fa";
 
-
-
-const InsightsCard = () => {
+const InsightsCard = ({title, amount, monthRate}) => {
   return (
     <>
         <Container>
-            <span className="title">Cash Desk</span>
+            <span className="title">{title}</span>
             <div className="data">
-                <span className="data-money">2 550 DHs</span>
-                <span className='data-rate positive'>
-                    +1 500 DHs
-                    <FaArrowUp className='icon' />
+                <span className="data-money">{amount} DHs</span>
+                <span className={`data-rate ${monthRate > 0 ? "positive" : "negative"}`}>
+                    {monthRate} DHs
+                    {
+                        monthRate > 0 ? <FaArrowUp className='icon' /> : <FaArrowDown className='icon' />
+                    }
                 </span>
             </div>
             <span className='sub-text'>Compared to last month</span>
@@ -55,6 +56,9 @@ const Container = styled.div`
             }
             &.positive {
                 color: green;
+            }
+            &.negative {
+                color: red;
             }
         }
     }

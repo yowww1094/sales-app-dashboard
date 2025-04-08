@@ -17,12 +17,12 @@ const data = [
   {
     month: "January",
     sales: 4000,
-    pv: 2400,
+    purchases: 0,
   },
   {
     month: "Febuary",
     sales: -3000,
-    purchases: 1398,
+    purchases: -1398,
   },
   {
     month: "March",
@@ -32,12 +32,12 @@ const data = [
   {
     month: "April",
     sales: 2780,
-    purchases: 3908,
+    purchases: -3908,
   },
   {
     month: "May",
     sales: -1890,
-    purchases: 4800,
+    purchases: -4800,
   },
   {
     month: "June",
@@ -47,22 +47,22 @@ const data = [
   {
     month: "July",
     sales: 3490,
-    purchases: 4300,
+    purchases: -4300,
   },
   {
     month: "Aout",
     sales: 3490,
-    purchases: 4300,
+    purchases: -300,
   },
   {
     month: "September",
     sales: 3490,
-    purchases: 4300,
+    purchases: -600,
   },
   {
     month: "October",
     sales: 3490,
-    purchases: 4300,
+    purchases: -7300,
   },
   {
     month: "November",
@@ -72,7 +72,7 @@ const data = [
   {
     month: "December",
     sales: 3490,
-    purchases: 4300,
+    purchases: -4300,
   },
 ];
 
@@ -81,7 +81,7 @@ const ComposedBarChart = () => {
     <>
       <Container>
         <div className="title">
-          <h3>Cash Desk Analytics</h3>
+          <h3>Sales/Purchases Analytics</h3>
         </div>
         <div className="chart">
           <ResponsiveContainer width="100%" aspect={4/1}>

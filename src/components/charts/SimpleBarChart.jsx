@@ -20,12 +20,12 @@ const data = [
   {
     month: "Febuary",
     cashAmt: 2210,
-    bankAmt: 5000,
+    bankAmt: 7000,
   },
   {
     month: "March",
     cashAmt: 2290,
-    bankAmt: 5000,
+    bankAmt: 0,
   },
   {
     month: "April",

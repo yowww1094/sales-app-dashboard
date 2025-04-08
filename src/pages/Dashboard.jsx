@@ -4,15 +4,41 @@ import InsightsCard from '../components/InsightsCard';
 import SimpleBarChart from '../components/charts/SimpleBarChart';
 import ComposedBarChart from '../components/charts/ComposedBarChart';
 import PieReChart from '../components/charts/PieReChart'
+
+const insightsData = [
+  {
+    title: 'Cash Desk',
+    amount: 9500,
+    monthRate: -1500,
+  },
+  {
+    title: 'Cash Bank',
+    amount: 18000,
+    monthRate: 2000,
+  },
+  {
+    title: 'Sales',
+    amount: 5500,
+    monthRate: 2000,
+  },
+  {
+    title: 'Purchases',
+    amount: 2000,
+    monthRate: -500,
+  },
+]
 const Dashboard = () => {
   return (
     <>
       <Container>
         <div className="insights-warapper">
-          <InsightsCard />
-          <InsightsCard />
-          <InsightsCard />
-          <InsightsCard />
+          {
+            insightsData.map((data, key) => {
+              return (
+                <InsightsCard key={key} title={data.title} amount={data.amount} monthRate={data.monthRate}/>
+              )
+            })
+          }
         </div>
         <div className="single-chart">
           <SimpleBarChart />
